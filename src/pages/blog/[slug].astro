@@ -1,0 +1,35 @@
+---
+import supabase from "../../utils/initSupabase.js"
+
+import PostPage from "../../components/PostPage.jsx"
+
+
+
+export async function getStaticPaths() {
+  const { data } = await supabase.from("blogPosts").select();
+ 
+  return data.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post } };
+  });
+}
+
+
+
+ 
+const {post} = Astro.props;
+
+
+---
+<head>
+
+	
+	<title>{post.title}</title>
+
+</head>
+
+<div>
+<PostPage post={post} />
+</div>
+  
