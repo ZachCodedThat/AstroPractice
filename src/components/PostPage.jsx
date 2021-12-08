@@ -4,7 +4,7 @@ const PostPage = ({ post }) => {
   const { title, image, date, body, id } = post;
   return (
     <body>
-      <h1>
+      <h1 class="text-3xl font-semibold p-1">
         {id}: {title}: {date}
       </h1>
 

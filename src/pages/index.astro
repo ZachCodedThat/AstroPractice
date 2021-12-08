@@ -1,18 +1,7 @@
 ---
-import supabase from "../utils/initSupabase.js"
+
 
 import Post from "../components/Post.jsx"
-
-
-
-
-const posts = await supabase.from("blogPosts").select();
-
-const data = posts.data;
-  
-
-
-
 
 
 ---
@@ -21,7 +10,7 @@ const data = posts.data;
 
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="stylesheet" href={Astro.resolve("../assets/style/global.css")} >
 	<meta name="viewport" content="width=device-width" />
 	<title>Zach is cool</title>
 	
@@ -29,7 +18,7 @@ const data = posts.data;
 
 <body>
 
-<Post posts={data} />
+<Post  />
 
 
 </body>

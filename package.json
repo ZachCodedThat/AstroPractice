@@ -9,7 +9,9 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.21.6"
+    "astro": "^0.21.6",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
   },
   "dependencies": {
     "@astrojs/renderer-react": "^0.3.1",
